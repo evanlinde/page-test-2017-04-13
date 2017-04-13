@@ -3,9 +3,7 @@
   {% assign name_length = repository.name | size %}
   {% if name_length == 16 %}
     {% assign slice1 = repository.name | slice: 0,5 %}
-    {% if slice1 == 'shell' %}
-    * [{{ repository.name }}]({{ repository.html_url }})
-    {% endif %}
+    * [{{ repository.name }}]({{ repository.html_url }}) {{ slice1 }}
   {% endif %}
 {% endfor %}
 
