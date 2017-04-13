@@ -5,8 +5,7 @@ Blah blah blah
   This is a line in the for loop
   {% assign name_length = repository.name | size %}
   This one comes after assigning a variable
-  {% if name_length == 16 %}
-    Blah [{{ repository.name }}]({{ repository.html_url }}) {{ repository.tagline }} 
+  {% if name_length == 16 %} * [{{ repository.name }}](https://evanlinde.github.io/{{ repository.name }}) {{ repository.html_url }} 
   {% endif %}
   This is a line inside the for loop (at the end)
 {% endfor %}
