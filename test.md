@@ -7,13 +7,8 @@
   {% assign name_length = repository.name | size %}
   {% if name_length == 16 %}
     {% assign slice1 = repository.name | slice: 0,5 %}
-    {% comment %}
-      {% assign year = repository.name | slice: 6,4 %}
-      {% assign month = repository.name | slice: 10,2 %}
-      {% assign day = repository.name | slice: 12,2 %}
-    {% endcomment %}
     {% if slice1 == 'shell' %}
-      * [{{ repository.name }}]({{ repository.html_url }})
+    * [{{ repository.name }}]({{ repository.html_url }})
     {% endif %}
   {% endif %}
 {% endfor %}
