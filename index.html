@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Test</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+$(document).ready(function(){
+    $.ajaxSetup ({
+        cache: false
+    });
+
+    $.fn.show_full_terminal = function(){
+        $("#full_terminal").height($(document).height()-$('#header').height()-20);
+        $("#full_terminal").load("https://github.com/OSU-SWC/#org-repositories");
+    };
+
+    $(document).show_full_terminal();
+});
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <button class="button" id="nav_terminal">Full Terminal</button> <button class="button" id="nav_commands">Commands</button>
+    </nav>
+  </header>
+  <div id="full_terminal"></div>
+</body>
+</html>
